@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Copy to wrangler.jsonc and replace the development D1 placeholder with
+  // the ID of a database you created for your own isolated development use.
+  // Never point this example at the VärmePuls production database.
+  "name": "varmepuls-api-development",
+  "main": "src/cloud/worker.ts",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "d1_databases": [
+    {
+      "binding": "VARMEPULS_STATE_DB",
+      "database_name": "varmepuls-state-development",
+      "database_id": "REPLACE_WITH_YOUR_OWN_DEVELOPMENT_D1_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

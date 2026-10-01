@@ -1,0 +1,27 @@
+{
+  "name": "varmepuls-core",
+  "version": "0.1.0",
+  "description": "Open-source energy optimization for electric home heating and domestic hot water using Swedish electricity prices.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --experimental-sqlite --test tests/planner.test.ts tests/price-provider.test.ts tests/elprisetjustnu.test.ts tests/simulator.test.ts tests/cloud/store.test.ts tests/security/identity-model.test.ts tests/security/feasibility.test.mjs tests/security/device-auth-local.test.mjs",
+    "demo": "node src/simulator/demo.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck:worker": "tsc --noEmit -p tsconfig.worker.json"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.8",
+    "miniflare": "5.20260930.0-alpha",
+    "typescript": "5.9.3",
+    "wrangler": "4.145.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260930.2": true
+  }
+}

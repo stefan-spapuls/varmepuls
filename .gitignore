@@ -1,0 +1,46 @@
+# Dependencies and generated build/test output
+node_modules/
+dist/
+build/
+coverage/
+.test-tmp/
+.tmp/
+tmp/
+*.tsbuildinfo
+
+# Logs and local databases
+*.log
+npm-debug.log*
+*.sqlite
+*.sqlite3
+*.db
+
+# Local runtime state and deployment configuration
+.wrangler/
+.wrangler-local/
+/wrangler.jsonc
+.dev.vars*
+!.dev.vars.example
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.pfx
+*.p12
+config.local.*
+*.local.json
+
+# Private household data and generated observations
+data/
+telemetry/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.fleet/
+.history/
+.DS_Store
+Thumbs.db
+Desktop.ini
